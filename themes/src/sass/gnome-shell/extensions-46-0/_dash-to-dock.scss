@@ -1,8 +1,8 @@
 $dashtodock_background: if($variant == 'light', rgba($white, 0.65), $panel);
 $dashtodock_hover_icons: if(
 	$variant == 'light',
-	inset 0 0 100px 10px rgba($black, 0.35),
-	inset 0 0 100px 10px rgba($primary, 0.35)
+	inset 0 0 0 1px rgba($black, 0.35),
+	inset 0 0 0 1px rgba($primary, 0.35)
 );
 
 // Scrollview style
