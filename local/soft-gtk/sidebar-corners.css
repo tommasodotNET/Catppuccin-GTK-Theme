@@ -1,0 +1,15 @@
+/* Inset sidebar surface: round all exposed corners under the headerbar. */
+.nautilus-window placessidebar {
+  background-color: #24273a;
+}
+.nautilus-window placessidebar > scrolledwindow {
+  background-color: #1e2030;
+  border-radius: 18px;
+  margin: 4px 6px 6px 6px;
+}
+.nautilus-window placessidebar list.navigation-sidebar {
+  background-color: transparent;
+  border-radius: 18px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}

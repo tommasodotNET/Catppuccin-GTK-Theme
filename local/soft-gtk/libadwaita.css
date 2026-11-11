@@ -1,0 +1,45 @@
+/* Shared libadwaita sidebar language, including Settings navigation pages. */
+.sidebar-pane {
+  background-color: #1e2030;
+  color: #cad3f5;
+}
+.sidebar-pane navigation-view-page stack > scrolledwindow,
+.sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow {
+  background-color: #1e2030;
+  border-radius: 18px;
+  margin: 4px 6px 6px;
+}
+.sidebar-pane .navigation-sidebar,
+.sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar {
+  background-color: transparent;
+  color: #cad3f5;
+  border-radius: 18px;
+}
+.sidebar-pane .navigation-sidebar > row,
+.sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row {
+  border-radius: 12px;
+  color: #cad3f5;
+}
+.sidebar-pane .navigation-sidebar > row:selected,
+.sidebar-pane toolbarview > stack > box > widget > widget > scrolledwindow > .navigation-sidebar > row:selected {
+  background-image: none;
+  background-color: rgba(198, 160, 246, 0.22);
+  color: #cad3f5;
+  font-weight: 600;
+}
+.sidebar-pane .navigation-sidebar > row:selected label { color: #cad3f5; font-weight: 600; }
+.sidebar-pane .navigation-sidebar > row:selected image { color: #c6a0f6; }
+.sidebar-pane .navigation-sidebar > row:selected:hover {
+  background-color: rgba(198, 160, 246, 0.28);
+}
+.sidebar-pane .navigation-sidebar > row:hover:not(:selected) {
+  background-color: rgba(202, 211, 245, 0.07);
+}
+/* Settings uses navigation-view pages rather than Nautilus' placessidebar. */
+navigation-split-view > widget.sidebar-pane navigation-view-page > toolbarview > stack > box > widget > widget > scrolledwindow {
+  background-color: #1e2030;
+}
+preferencesgroup > box > box > label { font-weight: 600; color: #cad3f5; }
+row.activatable .title { color: #cad3f5; }
+row.activatable .subtitle { color: #a5adcb; }
+list.boxed-list { border-radius: 18px; }

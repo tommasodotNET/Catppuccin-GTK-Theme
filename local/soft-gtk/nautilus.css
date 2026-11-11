@@ -1,0 +1,64 @@
+/* Nautilus: explicit selectors outrank the baseline application's theme rules.
+   Verified against embedded Nautilus resource and local Catppuccin selectors. */
+.nautilus-window placessidebar > scrolledwindow,
+.nautilus-window placessidebar list.navigation-sidebar {
+  background-color: #1e2030;
+  color: #cad3f5;
+}
+.nautilus-window placessidebar list.navigation-sidebar > row {
+  border-radius: 12px;
+  color: #cad3f5;
+  font-weight: 400;
+}
+.nautilus-window placessidebar list.navigation-sidebar > row:selected {
+  background-image: none;
+  background-color: rgba(198, 160, 246, 0.22);
+  color: #cad3f5;
+  font-weight: 600;
+}
+.nautilus-window placessidebar list.navigation-sidebar > row:selected label {
+  font-weight: 600;
+  color: #cad3f5;
+}
+.nautilus-window placessidebar list.navigation-sidebar > row:selected image { color: #c6a0f6; }
+.nautilus-window placessidebar list.navigation-sidebar > row:hover:not(:selected) {
+  background-color: rgba(202, 211, 245, 0.07);
+  color: #cad3f5;
+}
+.nautilus-window placessidebar list.navigation-sidebar > row:selected:hover {
+  background-color: rgba(198, 160, 246, 0.28);
+  color: #cad3f5;
+}
+.nautilus-window placessidebar list.navigation-sidebar > row:selected:backdrop {
+  background-color: rgba(198, 160, 246, 0.14);
+}
+.nautilus-window .nautilus-pathbar {
+  border-radius: 14px;
+  background-color: rgba(202, 211, 245, 0.06);
+}
+.nautilus-window .nautilus-pathbar .nautilus-path-button {
+  border-radius: 10px;
+  color: #a5adcb;
+}
+.nautilus-window .nautilus-pathbar .nautilus-path-button.current-dir,
+.nautilus-window .nautilus-pathbar .nautilus-path-button.current-dir label {
+  color: #cad3f5;
+  font-weight: 600;
+}
+.nautilus-window .nautilus-pathbar .nautilus-path-button:hover {
+  background-color: rgba(198, 160, 246, 0.13);
+}
+.nautilus-window headerbar button:not(.suggested-action):not(.destructive-action):not(.circular):not(.close):not(.minimize):not(.maximize) {
+  border-radius: 12px;
+}
+.nautilus-window .nautilus-grid-view gridview > child:selected,
+.nautilus-window .nautilus-list-view columnview > listview > row:selected {
+  background-image: none;
+  background-color: rgba(198, 160, 246, 0.22);
+  color: #cad3f5;
+  box-shadow: inset 0 0 0 1px rgba(198, 160, 246, 0.32);
+}
+.nautilus-window .nautilus-grid-view gridview > child:hover:not(:selected) {
+  background-color: rgba(202, 211, 245, 0.055);
+}
+.nautilus-window .nautilus-grid-view gridview > child { border-radius: 14px; }

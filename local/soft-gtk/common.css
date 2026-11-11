@@ -1,0 +1,63 @@
+/* Catppuccin Soft applications: solid content, shared control language.
+   Preserve app geometry, destructive colours, circular and linked controls. */
+headerbar .title, .titlebar .title { font-weight: 600; }
+headerbar .subtitle { color: #a5adcb; font-weight: 400; }
+headerbar button:not(.circular):not(.close):not(.minimize):not(.maximize),
+.toolbar button:not(.circular) { border-radius: 12px; }
+headerbar button:hover:not(.suggested-action):not(.destructive-action),
+.toolbar button:hover:not(.suggested-action):not(.destructive-action) {
+  background-image: none;
+  background-color: rgba(202, 211, 245, 0.09);
+  color: #cad3f5;
+}
+headerbar button:checked:not(.suggested-action):not(.destructive-action),
+.toolbar button:checked:not(.suggested-action):not(.destructive-action) {
+  background-image: none;
+  background-color: rgba(198, 160, 246, 0.18);
+  color: #c6a0f6;
+}
+button.suggested-action {
+  background-image: none;
+  background-color: #c6a0f6;
+  color: #24273a;
+  font-weight: 600;
+}
+button.suggested-action:hover { background-color: #d6baf8; color: #24273a; }
+button.suggested-action:disabled {
+  background-color: rgba(198, 160, 246, 0.15);
+  color: rgba(202, 211, 245, 0.38);
+}
+entry { border-radius: 12px; }
+.sidebar, .navigation-sidebar { background-color: #1e2030; color: #cad3f5; }
+.sidebar row, .navigation-sidebar row { border-radius: 12px; }
+.sidebar row:selected, .navigation-sidebar row:selected {
+  background-image: none;
+  background-color: rgba(198, 160, 246, 0.19);
+  color: #cad3f5;
+}
+.sidebar row:selected label, .navigation-sidebar row:selected label { font-weight: 600; }
+.sidebar row:selected image, .navigation-sidebar row:selected image { color: #c6a0f6; }
+.sidebar row:hover:not(:selected), .navigation-sidebar row:hover:not(:selected) {
+  background-color: rgba(202, 211, 245, 0.065);
+}
+.sidebar row:selected:hover, .navigation-sidebar row:selected:hover {
+  background-color: rgba(198, 160, 246, 0.25);
+}
+notebook > header > tabs > tab { border-radius: 12px 12px 0 0; }
+notebook > header > tabs > tab:checked {
+  background-color: rgba(198, 160, 246, 0.12);
+  color: #cad3f5;
+}
+notebook > header > tabs > tab:checked label { font-weight: 600; }
+popover.background, popover.background > contents {
+  background-color: #24273a;
+  color: #cad3f5;
+  border-radius: 18px;
+}
+popover modelbutton, popover .model { border-radius: 10px; }
+popover modelbutton:hover, popover .model:hover {
+  background-color: rgba(198, 160, 246, 0.14);
+  color: #cad3f5;
+}
+.dim-label { color: #a5adcb; opacity: 1; }
+/* Do not change body text weight or global content spacing. */

@@ -1,0 +1,130 @@
+/* Catppuccin Macchiato Mauve Soft — foreground-only Shell trial.
+ * Glass backgrounds/refraction remain the responsibility of Blur My Shell.
+ * No global transparency, no widget reordering, no application CSS.
+ */
+
+/* Rounded tiles with legible inactive text and restrained hover states. */
+.quick-settings-grid { spacing-rows: 14px; spacing-columns: 14px; }
+.quick-toggle, .quick-toggle-has-menu { border-radius: 22px; min-height: 48px; }
+.quick-settings .quick-toggle,
+.quick-settings .quick-toggle-has-menu .quick-toggle-menu-button {
+  background-color: rgba(202, 211, 245, 0.09) !important;
+  color: #cad3f5;
+  box-shadow: none;
+}
+.quick-settings .quick-toggle:hover,
+.quick-settings .quick-toggle-has-menu .quick-toggle-menu-button:hover {
+  background-color: rgba(198, 160, 246, 0.18) !important;
+  color: #cad3f5;
+}
+.quick-settings .quick-toggle:active,
+.quick-settings .quick-toggle-has-menu .quick-toggle-menu-button:active {
+  background-color: rgba(198, 160, 246, 0.28) !important;
+}
+.quick-settings .quick-toggle:checked,
+.quick-settings .quick-toggle-has-menu .quick-toggle-menu-button:checked {
+  background-color: #c6a0f6 !important;
+  color: #24273a;
+}
+.quick-settings .quick-toggle:checked:hover,
+.quick-settings .quick-toggle-has-menu .quick-toggle-menu-button:checked:hover {
+  background-color: #d6baf8 !important;
+  color: #24273a;
+}
+.quick-settings .quick-toggle:checked:active,
+.quick-settings .quick-toggle-has-menu .quick-toggle-menu-button:checked:active {
+  background-color: #b98bea !important;
+  color: #24273a;
+}
+.quick-settings .quick-toggle:insensitive,
+.quick-settings .quick-toggle-has-menu .quick-toggle-menu-button:insensitive {
+  background-color: rgba(202, 211, 245, 0.04) !important;
+  color: rgba(202, 211, 245, 0.38);
+}
+.quick-settings .quick-toggle:focus {
+  box-shadow: inset 0 0 0 2px rgba(198, 160, 246, 0.75);
+}
+.quick-toggle .quick-toggle-title { font-weight: 600; }
+.quick-toggle .quick-toggle-subtitle { color: #a5adcb; }
+.quick-toggle:checked .quick-toggle-subtitle { color: rgba(36, 39, 58, 0.8); }
+.quick-toggle > StBoxLayout { spacing: 9px; }
+.quick-toggle-has-menu .quick-toggle:ltr { border-radius: 22px 0 0 22px; }
+.quick-toggle-has-menu .quick-toggle:rtl { border-radius: 0 22px 22px 0; }
+.quick-toggle-has-menu .quick-toggle:ltr:last-child,
+.quick-toggle-has-menu .quick-toggle:rtl:last-child { border-radius: 22px; }
+.quick-toggle-has-menu .quick-toggle-menu-button:ltr { border-radius: 0 22px 22px 0; }
+.quick-toggle-has-menu .quick-toggle-menu-button:rtl { border-radius: 22px 0 0 22px; }
+.quick-toggle-menu .popup-menu-item { border-radius: 14px; }
+
+/* Keep structure and outer glass surfaces; soften the nested content cards. */
+.popup-menu .message {
+  border-radius: 18px;
+  background-color: rgba(202, 211, 245, 0.025);
+  color: #cad3f5;
+  border: none;
+  box-shadow: none;
+}
+.popup-menu .message:hover {
+  background-color: rgba(202, 211, 245, 0.065);
+  color: #cad3f5;
+}
+.message .message-box .message-content { spacing: 6px; }
+.message .message-box .message-content .message-title { color: #cad3f5; font-weight: 600; }
+.message .message-header .message-header-content .event-time { color: #a5adcb; }
+.message .message-header .message-expand-button,
+.message .message-header .message-close-button { border-radius: 999px; }
+.message .message-header .message-expand-button:focus,
+.message .message-header .message-close-button:focus {
+  box-shadow: inset 0 0 0 2px rgba(198, 160, 246, 0.7);
+}
+.message .message-action-bin .button,
+.message-list .message-list-clear-button { border-radius: 999px; padding: 8px 16px; }
+
+/* Calendar: existing circular dates, gentler cards, clearer text hierarchy. */
+.datemenu-calendar-column { spacing: 10px; }
+.datemenu-calendar-column .datemenu-displays-box { spacing: 10px; }
+.datemenu-today-button { border-radius: 18px; }
+.datemenu-today-button .day-label { color: #a5adcb; }
+.datemenu-today-button .date-label { color: #cad3f5; }
+.calendar .calendar-month-label { color: #cad3f5 !important; }
+.calendar .calendar-day { color: #cad3f5 !important; }
+.calendar .calendar-day:hover,
+.calendar .calendar-day:focus { background-color: rgba(198, 160, 246, 0.16); }
+.calendar .calendar-day:selected,
+.calendar .calendar-day:active {
+  background-color: #c6a0f6;
+  color: #24273a !important;
+}
+.calendar .calendar-day.calendar-weekend { color: #a5adcb !important; }
+.calendar .calendar-day.calendar-other-month { color: rgba(202, 211, 245, 0.35) !important; }
+.calendar .calendar-day:selected { color: #24273a !important; }
+.world-clocks-button, .weather-button, .events-button {
+  border-radius: 18px;
+  background-color: rgba(202, 211, 245, 0.025);
+  box-shadow: none;
+  color: #cad3f5;
+}
+.world-clocks-button:hover, .weather-button:hover, .events-button:hover {
+  background-color: rgba(202, 211, 245, 0.065);
+}
+
+/* Quiet panel feedback. Do not change panel backgrounds or geometry. */
+#panel .panel-button:hover,
+#panel .panel-button:hover.clock-display .clock {
+  box-shadow: inset 0 0 0 1000px rgba(202, 211, 245, 0.08);
+  color: #cad3f5;
+}
+#panel .panel-button:active, #panel .panel-button:checked,
+#panel .panel-button:focus, #panel .panel-button:overview,
+#panel .panel-button:active.clock-display .clock,
+#panel .panel-button:checked.clock-display .clock {
+  box-shadow: inset 0 0 0 1000px rgba(198, 160, 246, 0.16);
+  color: #c6a0f6;
+}
+
+/* Dock material stays extension-controlled; only soften icon feedback. */
+#dashtodockContainer #dash .overview-tile .overview-icon,
+#dashtodockContainer #dash .show-apps .overview-icon { border-radius: 18px; }
+#dashtodockContainer #dash .overview-tile:hover .overview-icon {
+  box-shadow: inset 0 0 0 1px rgba(198, 160, 246, 0.35);
+}

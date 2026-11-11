@@ -1,0 +1,66 @@
+/* Soft date-menu composition. No height clipping or structural JS changes. */
+.message-list {
+  width: 21em;
+  min-width: 21em;
+  border: none;
+}
+.message-list:ltr { margin-right: 12px; padding-right: 12px; }
+.message-list:rtl { margin-left: 12px; padding-left: 12px; }
+.message-list .message-list-placeholder {
+  spacing: 10px;
+  color: #a5adcb;
+  font-size: 0.95em;
+  font-weight: 400;
+}
+.message-list .message-list-placeholder > StIcon {
+  icon-size: 40px;
+  margin-bottom: 4px;
+  color: rgba(165, 173, 203, 0.60);
+}
+.datemenu-calendar-column {
+  min-width: 0;
+  spacing: 12px;
+}
+.datemenu-calendar-column .datemenu-displays-box {
+  spacing: 12px;
+  margin: 0 4px;
+}
+.datemenu-calendar-column .datemenu-displays-section { padding-top: 6px; padding-bottom: 4px; }
+.datemenu-today-button { padding: 10px 14px; margin: 2px 4px; }
+.datemenu-today-button .day-label { color: #a5adcb; font-size: 0.9em; }
+.datemenu-today-button .date-label { color: #cad3f5; font-size: 1.45em; font-weight: 600; }
+.calendar { padding: 8px !important; margin: 2px 4px !important; }
+.calendar .calendar-month-label { padding: 8px 0; }
+.calendar .calendar-day-heading { font-size: 0.85em; color: #a5adcb; }
+/* Inner group surfaces: soft tint, never alter the extension's outer glass. */
+.datemenu-calendar-column .events-button,
+.datemenu-calendar-column .weather-button,
+.datemenu-calendar-column .world-clocks-button {
+  background-color: rgba(36, 39, 58, 0.38);
+  border: 1px solid rgba(202, 211, 245, 0.065);
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 10px !important;
+  margin: 0 !important;
+  color: #cad3f5;
+}
+.datemenu-calendar-column .events-button:hover,
+.datemenu-calendar-column .weather-button:hover,
+.datemenu-calendar-column .world-clocks-button:hover {
+  background-color: rgba(54, 58, 79, 0.46);
+  border-color: rgba(198, 160, 246, 0.16);
+}
+.events-button .events-box { spacing: 10px; }
+.events-button .events-section-title { color: #c6a0f6; font-weight: 600; font-size: 0.95em; }
+.events-button .events-list { spacing: 8px; color: #cad3f5; }
+.events-button .events-title { color: #cad3f5; font-size: 0.95em; font-weight: 600; }
+.events-button .event-time { color: #a5adcb; font-size: 0.82em; padding-top: 2px; }
+.weather-button .weather-header { color: #cad3f5; font-size: 0.95em; font-weight: 600; }
+.weather-button .weather-header.location { color: #a5adcb; font-size: 0.85em; }
+.weather-button .weather-box { spacing: 12px; }
+.weather-button .weather-grid { spacing-rows: 7px; spacing-columns: 14px; }
+.weather-button .weather-forecast-time { color: #a5adcb; font-size: 0.8em; }
+.weather-button .weather-forecast-icon { icon-size: 26px; color: #cad3f5; }
+.weather-button .weather-forecast-temp { color: #cad3f5; font-weight: 600; font-size: 0.9em; }
+.world-clocks-button .world-clocks-header { color: #a5adcb; }
+.world-clocks-button .world-clocks-city { color: #cad3f5; font-weight: 600; }
