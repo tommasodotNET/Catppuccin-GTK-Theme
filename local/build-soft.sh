@@ -27,7 +27,7 @@ gtk=o/'Catppuccin-Macchiato-Mauve-Soft-GTK';shutil.copytree(b,gtk,symlinks=True)
 p=gtk/'index.theme';p.write_text(p.read_text().replace(b.name,gtk.name))
 for version in (3,4):
  names=['common.css',f'gtk{version}.css']
- if version==4:names+=['nautilus.css','sidebar-corners.css','libadwaita.css','navigation-surfaces.css']
+ if version==4:names+=['nautilus.css','sidebar-corners.css','libadwaita.css','navigation-surfaces.css','popover-feedback.css']
  overlay='\n'+'\n'.join((r/'local/soft-gtk'/n).read_text() for n in names)
  for name in ('gtk.css','gtk-dark.css'):
   p=gtk/f'gtk-{version}.0'/name;p.write_text(p.read_text()+overlay)
